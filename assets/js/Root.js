@@ -52,7 +52,7 @@ class App extends Component {
             <TitleBar user={this.state.user} login={this.login} logout={this.logout}/>
             {this.state.user &&
             <div className='Main-Area'>
-               <FriendList events={this.state.events} friendList={this.state.friends}
+               <FriendList events={this.state.events} friendInfo={this.state.friends}
                            user={this.state.user}/>
                <CalendarView onChange={this.handleChange} events={this.state.events}
                              user={this.state.user}/>

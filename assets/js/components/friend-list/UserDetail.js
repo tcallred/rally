@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Modal, Button, Badge } from "react-bootstrap";
 import Image from "react-bootstrap/es/Image";
 // import thumbnail from "../../../static/images/thumbnail.jpg";
-import UploadPhotoModal from "./UploadPhotoModal";
+// import UploadPhotoModal from "./UploadPhotoModal";
 import UserSettingsModal from "./UserSettingsModal";
 
 class UserDetail extends Component {
@@ -78,11 +78,11 @@ class UserDetail extends Component {
             <Button onClick={this.props.closeModal}>Close</Button>
           </Modal.Footer>
         </Modal>
-        <UploadPhotoModal
+        {/* <UploadPhotoModal
           user={this.props.user}
           closeModal={this.flipModalStatePhotoModal}
           showModal={this.state.showModalPhoto}
-        />
+        /> */}
       </div>
     );
   }

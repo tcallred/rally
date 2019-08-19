@@ -1,3 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html, body, #root, #root>div {
+  height: 100%
+}
+
+/* .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+} */
+
 .App {
     display: flex;
     flex-direction: column;
@@ -5,11 +31,109 @@
 
 .Main-Area {
     display: flex;
-    justify-content: space-evenly;
     align-items: stretch;
     padding: 20px;
     padding-top: 0px;
-    flex-grow: 1;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.Main-Area .loginButtonGroup{
+    display: flex;
+    flex-direction: row;
+}
+.Main-Area .loginButtonsAndSubtitleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Main-Area .loginButton{
+    margin-right: 20px;
+}
+
+.Main-Area .signUpButton{
+}
+
+
+.title{
+    margin-top: 5%;
+}
+
+.subtitle{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 20px;
+    color: #a1a1a1;
+}
+
+.extraLoginButtonsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extraLoginButtonsContainer .forgottenPasswordButton{
+    margin-bottom: 30px;
+    width: 191px;
+    height: 46px;
+}
+
+.extraLoginButtonsContainer .loginInWithGoogle:hover {
+    cursor: pointer;
+}
+
+.extraLoginButtonsContainer .loginInWithGoogle{
+    cursor: pointer;
+    width: 191px;
+    height: 46px;
+}
+
+
+.calendarUserDetailsContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.joinedFriendsListGroup{
+    padding: 10px;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.friendListItemParty{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.friendListItemParty .material-icons:hover{
+    color: #ad111e !important;
+}
+
+.thumbPartyList{
+    height: 1.5em;
+}
+
+.joinLeaveButton{
+    width: 50%;
+}
+
+.list-group-item-party{
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.userNamePartyList{
+    font-size: 20px;
 }
 
 .TitleBar {
@@ -17,6 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 0 0 auto;
 }
 
 .TitleBar button{
@@ -29,8 +154,141 @@
     font-size: 60px;
 }
 
-.TitleBar h4 {
+.TitleBar h5 {
     color: #777;
+}
+
+.UserDetail{}
+
+.UserDetail .userNamePhotoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.UserDetail .userPhoto{
+    height: 7em;
+}
+
+.UserDetail .userPhoto:hover{
+    opacity: 0.5;
+    border: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+}
+
+.UserDetail .photoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UserDetail .photoContainer p{
+    font-size: 14px;
+    color: #838383;
+}
+
+.UserDetail .userNameUserDetail{
+    margin-bottom: 38px;
+    margin-left: 38px;
+}
+
+.changeUserNameContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.UserSettingsModal p{
+    margin: 0;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.SaveSettingsModal p{
+    margin: 0 0 0 10px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.deleteOldAllEventsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.crop-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.controls {
+    margin: auto;
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    padding: 22px 0px;
+}
+
+.deleteOldAllEventsContainer Button{
+    margin: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.joinedFriendsPhotoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.circleList{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.UploadPhotoModal .userPhoto{
+    height: 7em;
+    margin-bottom: 15px;
+}
+
+.UploadPhotoModal .photoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UploadPhotoModal .photoContainer p{
+    font-size: 14px;
+    color: #838383;
+}
+
+.UploadPhotoModal .userNameUserDetail{
+    margin-bottom: 38px;
+    margin-left: 38px;
 }
 
 .FriendList {
@@ -39,27 +297,119 @@
     margin: 0px 15px;
 }
 
+.FriendList h3{
+    margin-top: 10px;
+}
+
+.list-group-item:hover{
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
 .FriendListItem {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.FriendListItem .badge{
+    margin: 5px;
 }
 
 .FriendListItem > .statusMsg{
     margin-left: 2em;
 }
 
-.FriendListItem .thumb {
-    height: 2em;
-    margin-right: 1em;
+.circleImage {
+    height: 100%;
 }
+
+.FriendDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FriendDetail > .statusMsg{
+    margin-left: 2em;
+}
+
+.FriendDetail .thumb {
+    height: 5em;
+    margin-right: 2em;
+}
+
+.FriendDetail .notificationsContainer{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+.FriendDetail .friendDetailInformationContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.FriendDetail .notificationsContainer p{
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.FriendDetail .circleList{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.FriendDetail h3{
+    margin-bottom: 20px;
+}
+
+.addFriendBtn {
+    margin-top: 15px;
+}
+
+.custom-modal{
+    width: 35em;
+}
+
 
 .Calendar {
     flex-grow: 4;
     margin: 0px 15px;
     display:flex;
     flex-direction: column;
+    width: 64%;
 }
+
+.rbc-time-view:hover{
+    cursor: row-resize;
+}
+
+/*Make agenda background white*/
+.rbc-agenda-time-cell{
+    background-color: white;
+}
+
+.rbc-agenda-date-cell{
+    background-color: white;
+    border-right: 1px solid #DDD;
+}
+
+.rbc-agenda-event-cell{
+    background-color: white;
+}
+/*Make agenda background white*/
 
 .BigCalendar {
     flex-grow: 1;
@@ -79,6 +429,45 @@
     background-color: #1385e5;
 }
 
+.BigCalendar .circleList{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/*These are the containers for the color names and circles*/
+.colorButtonGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.colorButtonToggle{
+    border: none;
+}
+
+.colorButtonMenu{
+    transform: translate3d(78px, -356px, 0px) !important;
+}
+
+/*These are the colored circles*/
+.colorButton{
+    border-radius: 100%;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 2px 50px 0px 0px;
+}
+
+.joinedFriendsUserIconCalendar{
+    height: 30px;
+    width: 30px;
+}
+
 .BigCalendar .rbc-today {
     background-color: #f7f7f7;
 }
@@ -89,28 +478,32 @@
     align-items: center;
     padding-bottom: 15px;
 }
-.CalendarHeading h4 {
-    color:#1385e5;
+.CalendarHeading h5 {
+    color: #4a70e5;
     font-weight: bold;
 }
-/*.time-picking {*/
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-/*}*/
+
 .m-input-moment {
     position: absolute;
     background-color: white;
+    z-index: 2;
 }
 .time-display{
     cursor:pointer;
 }
-.modal-spacer {
-    width: 100%;
-    height: 200px;
+
+.gameTitleInput{
+
 }
 
 .delete-btn {
     float:left;
+}
+
+.user-name{
+    font-size: 18px;
+    margin: 0px 8px 0px 8px;
+    display: inline;
 }
 
 .calendar-placeholder {
@@ -121,7 +514,8 @@
 }
 .calendar-placeholder h2 {
     font-style: italic;
-    margin: 0 1em 0 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .friend-placeholder {
     width: 300px;
@@ -133,4 +527,296 @@
     border-radius: 20px;
     margin: 20px;
     padding: 20px;
+}
+
+.addEventButton{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    box-shadow: 10px 10px 30px #bbbbbb;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+    background-color: #ffffff;
+    border-color: #ececec;
+    color: #4255fa;
+
+}
+
+.addEventButton:focus{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px #bbbbbb;
+    background-color: #ffffff;
+    border-color: #ececec;
+    color: #4255fa;
+}
+
+@media only screen
+and (max-device-width: 825px)
+and (orientation : landscape){
+    .custom-modal{
+        top: 110% !important;
+    }
+}
+
+/* Portrait and Landscape */
+@media only screen
+and (max-device-width: 825px) {
+
+    .App {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title{
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .subtitle{
+        margin-top: 5%;
+        text-align: center;
+        font-size: 20px;
+        color: #a1a1a1;
+    }
+
+    .Main-Area {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .TitleBar{
+        padding: 0;
+        margin: 15px;
+    }
+
+    .titleBarBtns {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .TitleBar .title{
+        margin-top: 20%;
+    }
+
+
+    .TitleBar button{
+        font-size: 14px;
+        margin: 5px;
+
+    }
+
+    .TitleBar h1 {
+        font-weight: 700;
+        letter-spacing: 4px;
+        font-size: 20px;
+    }
+
+    .TitleBar h5 {
+        color: #777;
+        font-size: 10px;
+    }
+
+    .sideBarMobile{
+        z-index: 6 !important;
+        width: 80%;
+        justify-content: left;
+    }
+
+    .sideBarMobileButton{
+        margin: 10px;
+    }
+
+    .innerSideBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1
+    }
+
+    .FriendList {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .FriendList h3{
+        padding-top: 10px;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+
+    .list-group-item:hover{
+        background-color: #f6f6f6;
+        cursor: pointer;
+    }
+
+    .FriendListItem > .statusMsg{
+        margin-left: 2em;
+    }
+
+    .FriendListItem .thumb {
+        height: 2em;
+        margin-right: 1em;
+    }
+
+    .FriendDetail {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .FriendDetail > .statusMsg{
+        margin-left: 2em;
+    }
+
+    .FriendDetail .thumb {
+        height: 5em;
+        margin-right: 2em;
+    }
+
+    .addFriendBtn {
+        margin-top: 15px;
+    }
+
+    .custom-modal{
+        height: auto;
+        overflow-y: scroll;
+        width: 90%;
+        margin: 0;
+        top: 70%;
+    }
+
+    .Calendar {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Calendar:hover{
+        cursor: pointer;
+    }
+
+    .BigCalendar {
+        position: relative;
+    }
+
+    .BigCalendar .rbc-event {
+        background-color: #1385e5;
+        border: none;
+    }
+
+    .BigCalendar .rbc-day-slot .rbc-event {
+        border: none;
+        box-shadow: 2px 2px 10px #333;
+    }
+
+    .BigCalendar .rbc-event.rbc-selected {
+        background-color: #1385e5;
+    }
+
+    .BigCalendar .rbc-today {
+        background-color: #f7f7f7;
+    }
+
+    .BigCalendar .rbc-timeslot-group{
+        font-size: 10px;
+        border: none;
+
+    }
+
+    .rbc-time-header-gutter[style] {
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
+    }
+
+    .rbc-time-header[style]{
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    .rbc-label {
+        padding: 0 !important;
+        color: #919191;
+    }
+
+    .rbc-time-gutter{
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
+    }
+
+
+    .rbc-toolbar-label{
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .CalendarHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .CalendarHeading h2 {
+        font-size: 20px;
+        display: inline;
+    }
+
+    .CalendarHeading h5 {
+        color: #4a70e5;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .m-input-moment {
+        position: absolute;
+        background-color: white;
+        z-index: 2;
+    }
+    .time-display{
+        cursor:pointer;
+    }
+
+    .gameTitleInput{
+
+    }
+
+    .delete-btn {
+        float:left;
+    }
+
+    .user-name{
+        font-size: 18px;
+        display: inline;
+    }
+
+    .friend-placeholder {
+        width: 300px;
+    }
+    .calendar-placeholder, .friend-placeholder {
+        border: #808080 1px dashed;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+    }
+
 }

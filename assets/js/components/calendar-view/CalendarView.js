@@ -16,6 +16,7 @@ class CalendarView extends Component {
     super(props);
 
     this.handleShow = this.handleShow.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
@@ -278,11 +279,6 @@ class CalendarView extends Component {
       <div className="Calendar">
         <CalendarHeading addEvent={this.handleAddEventButton} />
         <BigCalendar className="BigCalendar" selectable showMultiDayTimes {...bigCalendarProps}/>
-          <Button
-            onClick={this.handleAddEventButton}
-            className="addEventButton">
-            +
-          </Button>
         <EventEditModal {...eventEditModalProps}/>
       </div>
     );
